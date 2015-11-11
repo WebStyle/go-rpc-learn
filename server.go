@@ -26,7 +26,11 @@ func (t *MyClass) SayHello(p *Person, hello *string) error {
 	return nil
 }
 
-
+func checkError(err error) {
+	if err != nil {
+		log.Fatal("Fatal error ", err.Error())
+	}
+}
 
 func main() {
 	myclass := new(MyClass)
